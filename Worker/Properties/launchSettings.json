@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "Worker": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5000/",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    "WorkerServiceBus": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

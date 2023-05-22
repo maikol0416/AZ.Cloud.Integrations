@@ -1,0 +1,100 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.10.0" />
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.13.1" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="6.0.0" />
+
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ReglasNegocio\Interfaces\ISeguridadNegocio.cs" />
+    <Compile Remove="ReglasNegocio\Implementaciones\SeguridadNegocio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="ReglasNegocio\Implementaciones\MongoAut\" />
+    <None Remove="ReglasNegocio\Implementaciones\SqlAut\" />
+    <None Remove="ReglasNegocio\Interfaces\MongoAut\" />
+    <None Remove="ReglasNegocio\Interfaces\SqlAut\" />
+    <None Remove="Base\" />
+    <None Remove="Models\Auth\" />
+    <None Remove="Models\Auth\Service\" />
+    <None Remove="Models\Auth\Interface\" />
+    <None Remove="Models\Files\" />
+    <None Remove="Models\Test\" />
+    <None Remove="Port\" />
+    <None Remove="Models\Porcicultura\" />
+    <None Remove="Models\Inventario\" />
+    <None Remove="Models\Parametros\" />
+    <None Remove="Models\App\" />
+    <None Remove="Base\Dto\" />
+    <None Remove="Models\Currency\Dto\" />
+    <None Remove="Models\Currency\Interface\" />
+    <None Remove="Models\Currency\Mapper\" />
+    <None Remove="Models\Currency\Service\" />
+    <None Remove="Models\Currency\Validator\" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="UtilNuget" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.Extensions.Configuration" />
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="CQRS\" />
+    <None Remove="CQRS\Common\" />
+    <None Remove="CQRS\Common\Command\" />
+    <None Remove="CQRS\Common\Query\" />
+    <None Remove="CQRS\Auth\" />
+    <None Remove="CQRS\Auth\Query\" />
+    <None Remove="Models\Elevator\" />
+    <None Remove="Models\Elevator\Interface\" />
+    <None Remove="Models\Elevator\Service\" />
+    <None Remove="Models\Elevator\Dto\" />
+    <None Remove="Models\Elevator\Mapper\" />
+    <None Remove="Models\Elevator\Validator\" />
+    <None Remove="CQRS\Elevator\" />
+    <None Remove="CQRS\Elevator\Query\" />
+    <None Remove="Models\Queue\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Port\" />
+    <Folder Include="Base\Dto\" />
+    <Folder Include="CQRS\" />
+    <Folder Include="CQRS\Common\" />
+    <Folder Include="CQRS\Common\Command\" />
+    <Folder Include="CQRS\Common\Query\" />
+    <Folder Include="CQRS\Auth\" />
+    <Folder Include="CQRS\Auth\Query\" />
+    <Folder Include="Models\Elevator\" />
+    <Folder Include="Models\Elevator\Interface\" />
+    <Folder Include="Models\Elevator\Service\" />
+    <Folder Include="Models\Elevator\Dto\" />
+    <Folder Include="Models\Elevator\Mapper\" />
+    <Folder Include="Models\Elevator\Validator\" />
+    <Folder Include="CQRS\Elevator\" />
+    <Folder Include="CQRS\Elevator\Query\" />
+    <Folder Include="Models\Queue\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ServiceBus">
+      <HintPath>..\LocalReference\ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="UtilNuget">
+      <HintPath>..\LocalReference\UtilNuget.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

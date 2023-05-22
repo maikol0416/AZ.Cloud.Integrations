@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Worker-df8a0bf5-77ef-44ed-a570-00a4bd43d660</UserSecretsId>
+    <AssemblyName>Worker</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Worker' ">
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="HostServices\" />
+    <None Remove="ServiceBus" />
+    <None Remove="UtilNuget" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HostServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UtilNuget">
+      <HintPath>..\LocalReference\UtilNuget.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceBus\ServicesBus.csproj" />
+  </ItemGroup>
+</Project>

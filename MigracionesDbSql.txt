@@ -1,0 +1,9 @@
+﻿
+code first
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+database first
+dotnet ef dbcontext Scaffold "Server=tcp:gen-data-dev.database.windows.net,1433;Initial Catalog=cloudjm-dev-db;Persist Security Info=False;User ID=gen-data-user-db-dev;Password=Gd10471618;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"Microsoft.EntityFrameworkCore.SqlServer -o models
+Scaffold-DbContext "Data Source=tcp:gen-data-dev.database.windows.net,1433;Initial Catalog=cloudjm-dev-db;Persist Security Info=True;User ID=gen-data-user-db-dev;Password=Gd10471618" Microsoft.EntityFrameworkCore.SqlServer  -OutputDir Entities -DataAnnotations -NoOnConfiguring -NoPluralize -force -Tables Debtor,Route,RouteClient,Collaborator,RouteCollaborator,ClientPortfolio,PortfolioMovement
