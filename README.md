@@ -1,5 +1,8 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+TODO: Esta solucion contiene integraciones con Azure Cloud, una API y un Worker que se utilizan como servicios clientes de pruebas.
+
+Actualmente se tienen las siguientes integraciones:
+1.	AZ Services Bus (colas)
 
 # Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
