@@ -58,7 +58,7 @@ void ConfiguracionBase(IServiceCollection services)
     #region swagger
     services.AddSwaggerGen(c =>
     {
-        c.SwaggerDoc("v1", new OpenApiInfo { Title = "API ELEVATOR MANAGER", Version = "v1", Description = "" });
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "API TEST AZ CLOUD INTEGRATIONS", Version = "v1", Description = "" });
         c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
         {
             Name = "Authorization",
