@@ -1,5 +1,0 @@
-{
-  "cliente": "client01",
-  "extencion": ".db3",
-  "contenido": "LS0gVEFCTEUNCkNSRUFURSBUQUJMRSBkZW1vIChJRCBpbnRlZ2VyIHByaW1hcnkga2V5LCBOYW1lIHZhcmNoYXIoMjApLCBIaW50IHRleHQgKTsNCiANCi0tIElOREVYDQogDQotLSBUUklHR0VSDQogDQotLSBWSUVXDQogDQo="
-}
